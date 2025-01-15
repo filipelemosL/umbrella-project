@@ -1,0 +1,13 @@
+.main {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 400px;
+    width: 400px;
+    background-color: #d9d4d4;
+    border-radius: 20px;
+    background: #d9d4d4;
+    box-shadow: 20px 20px 60px #b8b4b4,
+        -20px -20px 60px #faf4f4;
+}
