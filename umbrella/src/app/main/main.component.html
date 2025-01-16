@@ -1,9 +1,21 @@
 <main class="main">
-    <div class="answer">
-        <p>Vai chover hoje?</p>
-        <h1>{{ willItRain }}</h1>
-    </div>
-    <div class="details">
-
+    <div class="answer border">
+        <p class="question border">Vai chover hoje?</p>
+        <div class="answer-container borderd">
+            <h1 class="yes-no border">{{ willItRain }}</h1>
+            <p class="accuracy border">Precisão: 98%</p>
+        </div>
+        <div class="location-container border">
+            <img class="location-icon border" src="../../assets/location-icon.png" alt="Location Icon">
+            <p class="location border">{{location}}</p>
+        </div>
     </div>
 </main>
+<div class="btns border">
+    <button class="edit-location border">
+        Editar localização
+    </button>
+    <button class="details border">
+        Mais detalhes
+    </button>
+</div>
