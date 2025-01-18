@@ -1,5 +1,5 @@
 <main class="main">
-    <div class="answer border">
+    <div *ngIf="!isEditingLocation" class="answer border">
         <p class="question border">Vai chover hoje?</p>
         <div class="answer-container borderd">
             <h1 class="yes-no border">{{ willItRain }}</h1>
@@ -10,10 +10,17 @@
             <p class="location border">{{location}}</p>
         </div>
     </div>
+    <div *ngIf="isEditingLocation">
+        <form class="form" (submit)="updateLocation()">
+          <input class="input" id="new-location" placeholder="Nova localização" type="text" [(ngModel)]="newLocation" name="newLocation" required>
+          <button class="form-btn" type="submit">Salvar</button>
+        </form>
+      </div>
 </main>
 <div class="btns border">
-    <button class="edit-location border">
-        Editar localização
+    <button  class="edit-location border" (click)="toggleEditLocation()">
+          <p *ngIf="!isEditingLocation">Editar localização</p>
+          <p *ngIf="isEditingLocation">Voltar</p>
     </button>
     <button class="details border">
         Mais detalhes
